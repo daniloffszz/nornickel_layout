@@ -1,0 +1,70 @@
+@use '../vars';
+
+#Wellbeing {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    position: relative;
+
+    @include vars.down('xl') {
+        overflow: hidden;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 116%;
+        color: vars.$primary;
+        max-width: 815px;
+        z-index: 2;
+        position: relative;
+    }
+
+    .list {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        z-index: 2;
+        position: relative;
+
+        @include vars.down('xxls') {
+            padding-left: 0;
+        }
+    }
+
+    .wellbeing_bg_mobile {
+        display: none;
+
+        @include vars.down('xls') {
+            display: block;
+            height: 500px;
+            object-fit: contain;
+        }
+    }
+
+    .wellbeing_bg {
+        position: absolute;
+        bottom: 0;
+        right: 135px;
+
+        @include vars.down('xxxl') {
+            right: 60px;
+        }
+
+        @include vars.down('xxxls') {
+            right: 20px;
+            width: 800px;
+        }
+
+        @include vars.down('xxls') {
+            right: 10px;
+            width: 700px;
+        }
+
+        @include vars.down('xl') {
+            right: -100px;
+        }
+
+        @include vars.down('xls') {
+            display: none;
+        }
+    }
+}

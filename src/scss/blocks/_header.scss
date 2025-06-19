@@ -1,0 +1,54 @@
+@use "../vars";
+
+header {
+    height: 62px;
+    background: vars.$white;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    .logo {
+        height: 31px;
+        width: 216px;
+    }
+
+    nav {
+        align-items: flex-start;
+
+        .link {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            min-width: 132px;
+            justify-content: center;
+            font-weight: 400;
+            line-height: 150%;
+            text-align: center;
+            color: vars.$black;
+            text-decoration: none;
+
+            @include vars.down('xxls') {
+                font-size: vars.$fs-xs;
+                min-width: 92px;
+            }
+
+            &.active {
+                border-bottom: 4px #539ee6 solid;
+                height: (calc(100% - 4px));
+                margin: 4px;
+            }
+        }
+    }
+
+    .phone {
+        color: vars.$black;
+        font-weight: 700;
+        line-height: 150%;
+        text-decoration: none;
+
+        @include vars.down('xxls') {
+            font-size: vars.$fs-xs;
+        }
+    }
+}

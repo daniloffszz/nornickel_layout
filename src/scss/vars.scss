@@ -1,0 +1,61 @@
+$primary: #539ee6;
+$black: #4c4c4c;
+$white: #fff;
+$grey: #FAFAFA;
+
+$fs-base: 20px;
+$fs-xxxs: 12px;
+$fs-xxs: 14px;
+$fs-xs: 16px;
+$fs-s: 18px;
+$fs-m: $fs-base;
+$fs-l: 22px;
+$fs-xl: 24px;
+$fs-xxl: 26px;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xls: 1150px;
+$xl: 1200px;
+$xxls: 1400px;
+$xxl: 1500px;
+$xxxls: 1700px;
+$xxxl: 1800px;
+
+$max-width: 1620px;
+$min-width: 360px;
+
+$breakpoints: (
+  "sm": $sm,
+  "md": $md,
+  "lg": $lg,
+  "xls": $xls,
+  "xl": $xl,
+  "xxls": $xxls,
+  "xxl": $xxl,
+  "xxxls": $xxxls,
+  "xxxl": $xxxl
+);
+
+// от указанной точки и шире
+@mixin up($b) {
+  @if map-has-key($breakpoints, $b) {
+    $v: map-get($breakpoints, $b);
+
+    @media (min-width: $v) {
+      @content;
+    }
+  }
+}
+
+// от указанной точки и уже
+@mixin down($b) {
+  @if map-has-key($breakpoints, $b) {
+    $v: map-get($breakpoints, $b);
+
+    @media (max-width: $v) {
+      @content;
+    }
+  }
+}

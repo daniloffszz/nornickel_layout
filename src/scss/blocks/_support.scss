@@ -1,0 +1,144 @@
+@use '../vars.scss';
+
+#Support,
+#Eat,
+#Engagement,
+#Awards,
+#Analitics {
+
+    .container {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .support_block {
+        max-width: 800px;
+        width: 100%;
+        padding-right: 100px;
+
+        @include vars.down('xxxls') {
+            padding-right: 0;
+            max-width: 650px;
+        }
+    }
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    .effects {
+        margin-bottom: 20px;
+    }
+
+    .support_bg {
+        position: absolute;
+        left: -200px;
+        top: 30px;
+    }
+}
+
+#Support {
+    .support_bg {
+        @include vars.down('xxxls') {
+            left: -50px;
+        }
+
+        @include vars.down('xxls') {
+            width: 500px;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+        }
+    }
+}
+
+#Eat {
+    padding-top: 73px;
+
+    .container {
+        padding-bottom: 95px;
+    }
+
+    .support_block {
+        max-width: 900px;
+        width: 100%;
+        padding-right: 100px;
+    }
+
+    .support_bg {
+        left: unset;
+        top: unset;
+        right: 0;
+        bottom: 0;
+
+        @include vars.down('xxls') {
+            right: 15px;
+        }
+    }
+}
+
+#Engagement {
+
+    .container {
+        padding-top: 95px;
+        padding-bottom: 80px;
+    }
+
+    .support_bg {
+        left: 0;
+        bottom: 0;
+        top: unset;
+
+        @include vars.down('xxls') {
+            left: 15px;
+        }
+    }
+}
+
+#Awards {
+    .container {
+        padding-top: 95px;
+        padding-bottom: 80px;
+    }
+    .support_bg {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: unset;
+        margin: auto 0;
+
+        @include vars.down('xxls') {
+            right: 15px;
+        }
+    }
+}
+
+#Analitics {
+    .container {
+        padding-top: 95px;
+        padding-bottom: 80px;
+    }
+
+    .support_bg {
+        top: -40px;
+        left: -250px;
+
+        @include vars.down('xxxls') {
+            left: -100px;
+        }
+
+        @include vars.down('xxls') {
+            left: 0px;
+            width: 600px;
+            top: 30px;
+        }
+
+        @include vars.down('xl') {
+            left: 0px;
+            width: 500px;
+            top: 30px;
+        }
+    }
+}
+

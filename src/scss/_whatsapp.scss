@@ -1,0 +1,30 @@
+@use 'vars';
+
+.whatsapp {
+    border: 1px solid #539ee6;
+    border-radius: 16px;
+    background: #f3f5f7;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 12px;
+    text-align: center;
+    cursor: pointer;
+
+    span {
+        font-size: vars.$fs-xs;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        &.bold {
+            font-weight: 700;
+        }
+    }
+
+    svg {
+        height: 18px;
+        width: 18px;
+    }
+}

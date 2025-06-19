@@ -1,0 +1,230 @@
+@use 'vars';
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+
+    li {
+        display: flex;
+        gap: 16px;
+
+    }
+}
+
+.pulse_dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 10px solid vars.$primary;
+    position: absolute;
+    animation: pulse 2.5s linear infinite;
+    background: vars.$white;
+    cursor: pointer;
+
+    &.first {
+        right: 20%;
+        top: 50%;
+
+        @include vars.down('xxls') {
+            top: 60%;
+        }
+
+        @include vars.down('xls') {
+            right: unset;
+            left: 8%;
+            top: 50%;
+        }
+    }
+
+    &.second {
+        right: 28%;
+        top: 20%;
+
+        @include vars.down('xxls') {
+            top: 30%;
+        }
+
+        @include vars.down('xls') {
+            right: unset;
+            left: 20%;
+            top: 28%;
+        }
+    }
+
+    &.third {
+        right: 43%;
+        top: 45%;
+
+        @include vars.down('xls') {
+            right: unset;
+            left: 35%;
+            top: 35%;
+        }
+    }
+
+    &.fourth {
+        right: 37%;
+        top: 87%;
+
+        @include vars.down('xls') {
+            right: unset;
+            left: 25%;
+            top: 53%;
+        }
+    }
+
+    &.fifth {
+        right: 12%;
+        top: 80%;
+
+        @include vars.down('xls') {
+            right: unset;
+            left: 45%;
+            top: 53%;
+        }
+    }
+}
+
+.popup {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    padding: 10px 13px;
+    border-radius: 10px;
+    background: #dbe8f4;
+    display: none;
+    border: 1px solid vars.$primary;
+
+    &.first {
+        top: 41%;
+        right: 5%;
+    }
+
+    &.second {
+        top: 11%;
+        right: 10%;
+    }
+
+    &.third {
+        right: 33%;
+        top: 37%;
+    }
+
+    &.fourth {
+        right: 23%;
+        top: 78%;
+    }
+
+    &.fifth {
+        right: 1%;
+        top: 70%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(83, 158, 230, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(83, 158, 230, 0);
+    }
+}
+
+.grey_section {
+    border-top: 1px solid #dadcdf;
+    background: vars.$grey;
+    border-bottom: 1px solid #dadcdf;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: vars.$black;
+
+    &.blue {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 116%;
+        color: vars.$primary;
+    }
+}
+
+.small_headline {
+    font-size: vars.$fs-s;
+    color: vars.$black;
+}
+
+.effects {
+    display: grid;
+    margin-top: 24px;
+    gap: 16px;
+
+    .effects_item {
+        font-weight: 100;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        line-height: 100%;
+
+        &::before {
+            width: 11px;
+            height: 11px;
+            min-width: 11px;
+            min-height: 11px;
+            background: vars.$black;
+            border-radius: 50%;
+            content: "";
+            display: block;
+        }
+    }
+}
+
+.effects_header {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 229%;
+    color: #787c7f;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #323642;
+}
+
+.custom-checkbox+label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1.5px solid #dadcdf;
+    border-radius: 6px;
+    margin-right: .5em;
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+    background-size: 80% 80%
+}
+
+.custom-checkbox:checked+label:before {
+    border: 1px solid #539ee6;
+    background-color: #539ee6;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e")
+}

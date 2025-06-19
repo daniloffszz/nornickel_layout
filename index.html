@@ -1,63 +1,280 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Vite Template</title>
-  </head>
-  <body>
-		<div class="wrapper">
-			<div class="main">
-				<header class="main__header">
-					<div class="main__switch switch">
-						<div class="switch__box">
-							<input type="checkbox" id="switch">
-							<label for="switch"></label>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Физминутка</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<div class="container h-full flex align-items-center justify-content-between">
+			<svg class="logo">
+				<use href="/src/img/icons/svg.svg#logo"></use>
+			</svg>
+			<nav class="flex h-full gap-4">
+				<a href="" class="link active">Решения</a>
+				<a href="" class="link">Экспертиза</a>
+				<a href="" class="link">Презентация</a>
+				<a href="" class="link">О компании</a>
+				<a href="" class="link">Блог</a>
+			</nav>
+			<a href="tel:+7 927 948 55 66" class="phone">+7 927 948 55 66</a>
+			<a href="#" class="button button_outline">
+				Подключиться
+				<span>30 дней бесплатно</span>
+			</a>
+		</div>
+	</header>
+	<main>
+		<section id="Wellbeing">
+			<div class="container body_container">
+				<h1>Благополучие сотрудников и
+					здоровый офис</h1>
+				<img class="wellbeing_bg_mobile" src="/src/img/wellbeing.png" alt="">
+				<ul class="list">
+					<li>
+						<img src="/src/img/icons/arrow.svg" alt="">
+						<p>Цифровая well-being платформа для здоровья, профилактики выгорания, укрепления команды и
+							сильного HR-бренда.</p>
+					</li>
+					<li>
+						<img src="/src/img/icons/arrow.svg" alt="">
+						<p>Более 5 лет мы занимаемся разработкой программ, которые расширяют возможности людей и
+							способствуют реальным изменениям.</p>
+					</li>
+					<li>
+						<img src="/src/img/icons/arrow.svg" alt="">
+						<p>Рекомендации от врачей, фитнес-тренеров, HRD, CEO и министров.</p>
+					</li>
+				</ul>
+				<a href="#" class="button xl">
+					Подключиться
+					<span>30 дней бесплатно</span>
+				</a>
+			</div>
+			<img class="wellbeing_bg" src="/src/img/wellbeing.png" alt="">
+			<div class="pulse_dot first" data-popup="1"></div>
+			<div class="pulse_dot second" data-popup="2"></div>
+			<div class="pulse_dot third" data-popup="3"></div>
+			<div class="pulse_dot fourth" data-popup="4"></div>
+			<div class="pulse_dot fifth" data-popup="5"></div>
+			<div class="popup first" data-popup="1">
+				<img src="/src/img/icons/walk.svg" alt="">
+				<p>Персонализированная <br> гимнастика</p>
+			</div>
+			<div class="popup second" data-popup="2">
+				<img src="/src/img/icons/walk.svg" alt="">
+				<p>Более 10 тестирований, <br> чтобы лучше себя понимать
+				</p>
+			</div>
+			<div class="popup third" data-popup="3">
+				<img src="/src/img/icons/stress.svg" alt="">
+				<p>Антистресс <br>
+					программы</p>
+			</div>
+			<div class="popup fourth" data-popup="4">
+				<img src="/src/img/icons/calendar.svg" alt="">
+				<p>Календарь событий <br> и челленджи</p>
+			</div>
+			<div class="popup fifth" data-popup="5">
+				<img src="/src/img/icons/computer.svg" alt="">
+				<p>Устанавливается на <br> телефон или компьютер</p>
+			</div>
+			<div class="cookies">
+				<p>Мы используем куки. Продолжая использовать сайт, вы соглашаетесь на обработку персональных данных
+					в соответствии с политикой конфиденциальности.</p>
+				<button class="button button_cookie" type="button">Ок</button>
+			</div>
+		</section>
+		<section id="Why" class="grey_section">
+			<img src="/src/img/statistic.png" class="statistic_bg" alt="">
+			<div class="container body_container flex justify-content-end">
+				<div class="statistic_block">
+					<h2>Почему это важно?</h2>
+					<p class="effects_header">Последствия офисной работы:</p>
+					<div class="effects">
+						<p class="effects_item">ухудшение зрения</p>
+						<p class="effects_item">эмоциональное выгорание</p>
+						<p class="effects_item">остеохондроз</p>
+						<p class="effects_item">головные боли</p>
+						<p class="effects_item">сердечно-сосудистые заболевания</p>
+						<p class="effects_item">малоподвижный образ жизни</p>
+					</div>
+					<div class="statistics">
+						<div class="statistics_item">
+							<p class="procent">65%</p>
+							<p>чувствуют тревожность на рабочем месте,
+								у четверти она выражена особенно сильно</p>
+						</div>
+						<div class="statistics_item">
+							<p class="procent">40%</p>
+							<p>офисных работников испытывают симптомы
+								профессионального выгорания</p>
+						</div>
+						<div class="statistics_item">
+							<p class="procent">7%</p>
+							<p>рабочего времени уходит на больничные</p>
+						</div>
+						<div class="statistics_item">
+							<p class="procent">25%</p>
+							<p>текучесть кадров в стрессовой среде</p>
 						</div>
 					</div>
-				</header>
-
-				<div class="container">
-					<a class="main__logo" href="https://vitejs.dev/" target="_blank">
-						<picture>
-							<source srcset="/src/img/webp/logo-vite.webp" type="image/webp">
-							<img class="main__logo-img" src="/src/img/logo-vite.png" alt="logo-vite" width="300" height="300">
-						</picture>
-					</a>
-	
-					<h1 class="main__title title"><span>Vite</span> <br>simple starter markup template</h1>
-		
-					<ul class="main__badges badges">
-						<li class="badges__item">
-							<a class="badges__link" href="https://www.npmjs.com/package/autoprefixer" target="_blank">autoprefixer</a>
-						</li>
-						<li class="badges__item">
-							<a class="badges__link" href="https://www.npmjs.com/package/imagemin" target="_blank">imagemin</a>
-						</li>
-						<li class="badges__item">
-							<a class="badges__link" href="https://www.npmjs.com/package/imagemin-webp" target="_blank">imagemin-webp</a>
-						</li>
-						<li class="badges__item">
-							<a class="badges__link" href="https://www.npmjs.com/package/postcss-sort-media-queries" target="_blank">postcss-sort-media-queries</a>
-						</li>
-						<li class="badges__item">
-							<a class="badges__link" href="https://sass-lang.com" target="_blank">SCSS</a>
-						</li>
-						<li class="badges__item">
-							<a class="badges__link" href="https://github.com/FatehAK/vite-plugin-image-optimizer" target="_blank">vite-plugin-image-optimizer</a>
-						</li>
-						<li class="badges__item">
-							<a class="badges__link no-link" href="#">CSS Reset</a>
-						</li>
-					</ul>
+					<p class="quote_owner">* Данные по результатам исследования аналитиков из сервиса «Stape», НАФИ и
+						Фонда
+						Росконгресс</p>
 				</div>
 			</div>
-			<footer class="footer">
-				<div class="container">Made with ❤ by <a href="https://github.com/Grinch3214/vite-builder" target="_blank">Max</a></div>
-			</footer>
-		</div>
+		</section>
+		<section id="Complectation">
+			<img src="/src/img/complectation.png" class="complectation_bg" alt="">
+			<div class="container body_container">
+				<h2 class="text-center blue">Что входит в программу?</h2>
+				<h3 class="small_headline font-bold">Физическое благополучие</h3>
+				<h2>Офисная и производственная гимнастика</h2>
+				<div class="effects">
+					<p class="effects_item">Индивидуальный подбор упражнений для каждого сотрудника.</p>
+					<p class="effects_item">Не требует тренажеров и турников.</p>
+					<p class="effects_item">Можно выполнять прямо за рабочим местом, даже в строгом костюме или
+						миниюбке.</p>
+				</div>
+				<p class="font-medium">Физминутка предлагает более 15 программ по сбережению здоровья, например
+					“Здоровые глаза”, “Мужское
+					здоровье” и т.д.</p>
+			</div>
+		</section>
+		<section id="Support" class="grey_section">
+			<div class="container body_container flex justify-content-end relative">
+				<img src="/src/img/support_bg.png" alt="" class="support_bg">
+				<div class="support_block">
+					<h2 class="small_headline">Ментальное благополучие</h2>
+					<h2>Поддержка разума для устойчивости к стрессу</h2>
+					<div class="effects">
+						<p class="effects_item">Трекер эмоционального состояния</p>
+						<p class="effects_item">Персональные AI‑рекомендации по снижению стресса</p>
+						<p class="effects_item">Действенные упражнения, дыхательные практики и нейро‑игры для
+							восстановления фокуса</p>
+					</div>
+					<p class="font-medium">Физминутка отслеживает ментальное состояние сотрудников и предлагает
+						персональные рекомендации,
+						которые способствуют улучшению эмоционального фона.</p>
+				</div>
+			</div>
+		</section>
+		<section id="Eat">
+			<div class="container body_container flex justify-content-end relative flex-row-reverse">
+				<img src="/src/img/coffe.png" alt="" class="support_bg">
+				<div class="support_block">
+					<h2 class="small_headline">Питание</h2>
+					<h2>Советы нутрициолога</h2>
+					<div class="effects">
+						<p class="effects_item">Рекомендации по питанию для улучшения энергии, концентрации и
+							самочувствия.</p>
+						<p class="effects_item">Подходит для любого графика — офисного, удалённого и сменного.</p>
+						<p class="effects_item">Разработано с учётом занятости сотрудников</p>
+					</div>
+					<p class="font-medium">Программы включают: «Питание для продуктивности», «Иммунитет на
+						работе», «Питание в смену» и другие.</p>
+				</div>
+			</div>
+		</section>
+		<section id="Engagement" class="grey_section">
+			<div class="container body_container flex justify-content-end relative">
+				<img src="/src/img/engagement.png" alt="" class="support_bg">
+				<div class="support_block">
+					<h2 class="small_headline">Вовлечение</h2>
+					<h2>Увлекательные события и группы</h2>
+					<div class="effects">
+						<p class="effects_item">Сотрудники объединяются в клубы по интересам</p>
+						<p class="effects_item">Календарь событий отражает мероприятия, которые проводятся
+							в вашей компании</p>
+						<p class="effects_item">Вы можете создавать дополнительные группы, добавлять новости, которые
+							отразятся в ленте событий</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="Awards">
+			<div class="container body_container flex justify-content-end relative flex-row-reverse">
+				<img src="/src/img/diplom.png" alt="" class="support_bg">
+				<div class="support_block">
+					<h2 class="small_headline">Вознаграждение</h2>
+					<h2>Ежемесячное поощрение лучших</h2>
+					<div class="effects">
+						<p class="effects_item">Сотрудники за каждое выполненное упражнение получают баллы и соревнуются
+							между собой.</p>
+						<p class="effects_item">Победителям месяца в Панели управления автоматически формируются
+							красочные именные дипломы.</p>
+						<p class="effects_item">Компании сами выбирают как дополнительно поощрить лучших сотрудников.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="Analitics" class="grey_section">
+			<div class="container body_container flex justify-content-end relative">
+				<img src="/src/img/analitics.png" alt="" class="support_bg">
+				<div class="support_block">
+					<h2 class="small_headline">Анализ</h2>
+					<h2>Панель управления well-being плафтормой</h2>
+					<div class="effects">
+						<p class="effects_item">Аналитика по вовлеченности, эмоциональному фону коллектива.</p>
+						<p class="effects_item">Публикация новостей и событий.</p>
+						<p class="effects_item">Скачивание дипломов победителей месяца и добавление информации о
+							поощрениях</p>
+						<p class="effects_item">Управление клубами и челленджами.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="getPresentation">
+			<div class="container body_container">
+				<h2 class="bold blue fit h1">
+					Готовы провести презентацию
+				</h2>
+				<p class="sub_heading">Посетим вашу компанию или удаленно проведем в видео формате</p>
+				<form action="" class="presentation_form ru" onsubmit="ym(92997575,'reachGoal','index-comp')">
 
-    <script type="module" src="./src/js/main.js"></script>
-  </body>
+					<input type="hidden" value="https://fitalino.com/ru/presentation-form">
+					<div class="input_with_icon">
+						<img src="https://fitalino.com/img/name_icon.svg" class="input_icon" alt="">
+						<input type="text" placeholder="Ваше имя" id="name" name="name">
+						<p class="error_text"></p>
+					</div>
+					<div class="input_with_icon">
+						<img src="https://fitalino.com/img/phone_icon.svg" class="input_icon" alt="">
+						<input type="tel" placeholder="Телефон" id="phone" name="phone">
+						<p class="error_text"></p>
+					</div>
+					<div class="input_with_icon">
+						<img src="https://fitalino.com/img/company_icon.svg" class="input_icon" alt="">
+						<input type="text" placeholder="Название компании" id="company" name="company">
+						<p class="error_text"></p>
+					</div>
+					<button type="submit" class="button button_blue half">Отправить</button>
+					<input type="checkbox" class="custom-checkbox" id="happy1" name="happy" checked="" value="yes">
+					<label for="happy1">Я даю согласие на обработку персональных данных и принимаю пользовательское
+						соглашение</label>
+				</form>
+				<img src="https://fitalino.com/img/background_logo.svg" alt="" class="backgroud_logo">
+			</div>
+		</section>
+		<div class="whatsapp">
+			Написать нам <br>
+			<span>в <svg>
+					<use href="/src/img/icons/whatsapp.svg#whatsapp"></use>
+				</svg>
+				<span class="bold">WhatsApp</span></span>
+		</div>
+	</main>
+	<script type="module" src="./src/js/main.js"></script>
+	<script type="module" src="./src/js/dots.js"></script>
+	<script type="module" src="./src/js/cookies.js"></script>
+</body>
+
 </html>

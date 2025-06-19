@@ -1,0 +1,30 @@
+@use '../vars.scss';
+
+#Complectation {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    position: relative;
+
+    .small_headline {
+        margin-bottom: 20px;
+        margin-top: 62px;
+    }
+    
+    .effects {
+        margin-bottom: 20px;
+    }
+
+    .font-medium {
+        max-width: 730px;
+    }
+
+    .complectation_bg{ 
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include vars.down('xxl') {
+            width: 500px;
+        }
+    }
+}
