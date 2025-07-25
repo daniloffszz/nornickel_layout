@@ -22,7 +22,17 @@
     max-width: 815px;
     margin: 50px auto 0;
     z-index: 2;
-    position: relative
+    position: relative;
+
+    @include vars.down('sm') {
+        padding: 30px 20px;
+    }
+}
+
+#getPresentation .button {
+    @include vars.down('sm') {
+        max-width: unset;
+    }
 }
 
 .input_with_icon {
@@ -81,6 +91,10 @@
     font-weight: 400;
     font-size: 30px;
     color: vars.$black;
+
+    @include vars.down('sm') {
+        font-size: 18px;
+    }
 }
 
 #getPresentation .backgroud_logo {

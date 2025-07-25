@@ -1,3 +1,5 @@
+@use "vars";
+
 .cookies {
     max-width: 270px;
     background: #F4F7F9;
@@ -13,4 +15,13 @@
     border-radius: 6px;
     display: none;
     align-items: center;
+
+    @include vars.down('sm') {
+        position: static;
+        max-width: unset;
+        margin: 0 15px;
+        margin-top: 30px;
+        font-weight: 300;
+        font-size: 13px;
+    }
 }

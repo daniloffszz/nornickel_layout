@@ -9,4 +9,8 @@
 
 .body_container {
     max-width: 1345px;
+
+    @include vars.down('xxxls') {
+        max-width: 1200px;
+    }
 }

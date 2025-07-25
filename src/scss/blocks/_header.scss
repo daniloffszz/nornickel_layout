@@ -11,10 +11,28 @@ header {
     .logo {
         height: 31px;
         width: 216px;
+
+        @include vars.down('sm') {
+            width: 172px;
+            height: auto;
+        }
+    }
+
+    .burger {
+        display: none;
+
+        @include vars.down('lg') {
+            display: block;
+        }
     }
 
     nav {
         align-items: flex-start;
+        display: flex;
+
+        @include vars.down('lg') {
+            display: none !important;
+        }
 
         .link {
             height: 100%;
@@ -41,14 +59,44 @@ header {
         }
     }
 
+    .button {
+        @include vars.down('lg') {
+            display: none;
+        }
+    }
+
     .phone {
-        color: vars.$black;
-        font-weight: 700;
-        line-height: 150%;
         text-decoration: none;
 
-        @include vars.down('xxls') {
-            font-size: vars.$fs-xs;
+        @include vars.down('xls') {
+            margin-right: 30px;
+            margin-left: auto;
+        }
+
+        @include vars.down('sm') {
+            margin-right: 16px;
+        }
+
+        p {
+            color: vars.$black;
+            font-weight: 700;
+            line-height: 150%;
+
+            @include vars.down('xxls') {
+                font-size: vars.$fs-xs;
+            }
+
+            @include vars.down('xls') {
+                display: none;
+            }
+        }
+
+        svg {
+            display: none;
+
+            @include vars.down('xls') {
+                display: block;
+            }
         }
     }
 }

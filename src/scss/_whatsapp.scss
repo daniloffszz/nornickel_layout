@@ -10,6 +10,11 @@
     padding: 8px 12px;
     text-align: center;
     cursor: pointer;
+    z-index: 10;
+
+    @include vars.down('lg') {
+        display: none;
+    }
 
     span {
         font-size: vars.$fs-xs;

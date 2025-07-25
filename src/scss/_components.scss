@@ -1,5 +1,11 @@
 @use 'vars';
 
+main,
+footer,
+header {
+    overflow: hidden;
+}
+
 .list {
     list-style: none;
     display: flex;
@@ -150,6 +156,11 @@ h2 {
         font-size: 60px;
         line-height: 116%;
         color: vars.$primary;
+
+        @include vars.down('sm') {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -162,6 +173,27 @@ h2 {
     display: grid;
     margin-top: 24px;
     gap: 16px;
+
+    &.arrows {
+        .effects_item {
+            align-items: flex-end;
+
+            @include vars.down('sm') {
+                font-size: 16px;
+            }
+
+            &::before {
+                background: url('/src/img/icons/arrow.svg');
+                border-radius: 0;
+                width: 13px;
+                height: 7px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                margin-bottom: 3px;
+            }
+        }
+    }
 
     .effects_item {
         font-weight: 100;
@@ -195,6 +227,50 @@ h2 {
     position: absolute;
     z-index: -1;
     opacity: 0
+}
+
+.effects_text {
+    gap: 21px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    max-width: 690px;
+
+    p {
+        font-weight: 100;
+        color: vars.$black;
+        font-size: vars.$fs-xl;
+
+        @include vars.down('sm') {
+            font-size: 16px;
+        }
+    }
+
+    span {
+        color: vars.$primary;
+        font-weight: 700;
+    }
+}
+
+.grey_bg {
+    position: relative;
+
+    span {
+        z-index: 2;
+        position: relative;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        height: 12px;
+        width: 100%;
+        background: #DBE8F4;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 10px;
+    }
 }
 
 .custom-checkbox+label {
