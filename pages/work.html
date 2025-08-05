@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Физминутка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="container h-full flex align-items-center justify-content-between">
+            <svg class="logo">
+                <use href="/src/img/icons/svg.svg#logo"></use>
+            </svg>
+            <nav class="h-full gap-4">
+                <a href="" class="link active">Решения</a>
+                <a href="" class="link">Экспертиза</a>
+                <a href="" class="link">Презентация</a>
+                <a href="" class="link">О компании</a>
+                <a href="" class="link">Блог</a>
+            </nav>
+            <a href="tel:+7 927 948 55 66" class="phone">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M22.1252 18.4165C22.1252 18.7888 22.0425 19.1714 21.8667 19.5437C21.6909 19.916 21.4634 20.2677 21.1634 20.5986C20.6567 21.1571 20.0982 21.5604 19.4674 21.8189C18.8469 22.0775 18.1747 22.2119 17.4507 22.2119C16.3959 22.2119 15.2686 21.9637 14.0793 21.457C12.89 20.9502 11.7007 20.2677 10.5217 19.4093C9.33242 18.5406 8.20517 17.5788 7.12962 16.5136C6.06441 15.438 5.10263 14.3108 4.24426 13.1318C3.39623 11.9529 2.71367 10.7739 2.21727 9.60526C1.72086 8.4263 1.47266 7.29904 1.47266 6.2235C1.47266 5.52025 1.59676 4.84804 1.84496 4.22753C2.09316 3.59668 2.48615 3.01754 3.03427 2.50045C3.69614 1.84892 4.42007 1.52832 5.18536 1.52832C5.47493 1.52832 5.7645 1.59037 6.02305 1.71447C6.29193 1.83857 6.5298 2.02473 6.71595 2.29361L9.11525 5.67538C9.3014 5.93393 9.43584 6.17179 9.52892 6.39931C9.62199 6.61648 9.6737 6.83366 9.6737 7.03016C9.6737 7.27836 9.60131 7.52656 9.45652 7.76442C9.32208 8.00228 9.12559 8.25049 8.87738 8.49869L8.09141 9.31569C7.97765 9.42945 7.92594 9.5639 7.92594 9.72937C7.92594 9.8121 7.93628 9.88449 7.95696 9.96723C7.98799 10.05 8.01901 10.112 8.0397 10.1741C8.22585 10.5153 8.54645 10.96 9.00148 11.4978C9.46687 12.0356 9.96327 12.5837 10.501 13.1318C11.0595 13.6799 11.5973 14.1867 12.1454 14.6521C12.6832 15.1071 13.1279 15.4174 13.4795 15.6035C13.5312 15.6242 13.5932 15.6552 13.6656 15.6862C13.7484 15.7173 13.8311 15.7276 13.9242 15.7276C14.1 15.7276 14.2344 15.6656 14.3482 15.5518L15.1342 14.7762C15.3927 14.5176 15.6409 14.3211 15.8788 14.197C16.1166 14.0522 16.3545 13.9798 16.613 13.9798C16.8095 13.9798 17.0164 14.0212 17.2439 14.1143C17.4714 14.2074 17.7093 14.3418 17.9678 14.5176L21.391 16.9479C21.6598 17.1341 21.846 17.3513 21.9598 17.6098C22.0632 17.8684 22.1252 18.1269 22.1252 18.4165Z"
+                        stroke="#539EE6" stroke-width="2" stroke-miterlimit="10" />
+                </svg>
+                <p>+7 927 948 55 66</p>
+            </a>
+            <a href="#" class="button button_outline">
+                Подключиться
+                <span>30 дней бесплатно</span>
+            </a>
+            <div class="burger">
+                <svg width="45" height="46" viewBox="0 0 45 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.625 32.375L35.625 32.375M9.375 23H35.625M20.625 13.625L35.625 13.625" stroke="#539EE6"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="CreateChanges">
+            <div class="container">
+
+                <div class="waiting_wrapper">
+                    <div class="waiting_block">
+                        <h1>Создавай изменения</h1>
+                        <h3>Каждый день. Вместе с нами.</h3>
+                        <ul>
+                            <li>Компания в которой ценят рост и поддерживают амбиции.</li>
+                            <li>Дружная команда, атмосферные выезды и незабываемые впечатления.</li>
+                        </ul>
+                        <button class="button">Список вакансий</button>
+                    </div>
+                    <div class="waiting_block">
+                        <img src="/src/img/waiting_you.png" alt="">
+                        <p class="waiting_block_address">Офис в г. Уфа, ул. Коммунистическая 54.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="Moments" class="grey_section">
+            <div class="container">
+                <h2>Моменты</h2>
+                <div class="splide moments">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="item">
+                                    <img src="/src/img/moments.png" alt="">
+                                    <p class="text_block">
+                                        Зона отдыха в офисе
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="item">
+                                    <img src="/src/img/moments2.png" alt="">
+                                    <p class="text_block">
+                                        Корпоративные выезды на ГЛК
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="item">
+                                    <img src="/src/img/moments3.png" alt="">
+                                    <p class="text_block">
+                                        Экскурсии по предприятиям, активно развивающих социальные направления
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="item">
+                                    <img src="/src/img/mments4.png" alt="">
+                                    <p class="text_block">
+                                        Зерновой кофе-аппарат с вкусняшками
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Vacancies">
+            <div class="container">
+                <h2>
+                    Вакансии
+                </h2>
+                <div class="vacancies_list">
+                    <div class="vacancy">
+                        <h3 class="vacancy_header">
+                            Психолог
+                        </h3>
+                        <div class="vacancy_main-text">
+                            <div class="vacancy_requirements">
+                                <p class="vacancy_requirements_item">
+                                    Опыт работы: более 10 лет
+                                </p>
+                                <p class="vacancy_requirements_item">
+                                    Образование: Высшее
+                                </p>
+                            </div>
+                            <p>
+                                - Опыт корпоративной практики от 10 лет, приоритет — работа с компаниями среднего и
+                                крупного
+                                бизнеса.
+                                - Высшее психологическое образование, желательно — второе (например, по менеджменту или
+                                коучингу).
+                                - Глубокая специализация в корпоративной психологии, разрешении конфликтов,
+                                эмоциональном
+                                выгорании, групповом взаимодействии.
+                                - Умение проводить диагностику командных процессов, вовлечённости, скрытых конфликтов.
+                                - Опыт построения системной работы: групповые сессии, индивидуальные консультации,
+                                регулярные check-in по климату и фону.
+                                - Отличные навыки коммуникации: вы легко работаете как с линейными сотрудниками, так и с
+                                руководителями.
+                            </p>
+                        </div>
+                        <button class="vacancy_button">
+                            Откликнуться
+                        </button>
+                    </div>
+                    <div class="vacancy">
+                        <h3 class="vacancy_header">
+                            Специалист по геймификации
+                        </h3>
+                        <div class="vacancy_main-text">
+                            <div class="vacancy_requirements">
+                                <p class="vacancy_requirements_item">
+                                    Опыт работы: более 10 лет
+                                </p>
+                                <p class="vacancy_requirements_item">
+                                    Возможна удаленка
+                                </p>
+                            </div>
+                            <p>
+                                <span>- Опыт корпоративной практики от 10 лет, приоритет — работа с компаниями среднего
+                                    и
+                                    крупного</span>
+                                бизнеса.
+                                - Высшее психологическое образование, желательно — второе (например, по менеджменту или
+                                коучингу).
+                                - Глубокая специализация в корпоративной психологии, разрешении конфликтов,
+                                эмоциональном
+                                выгорании, групповом взаимодействии.
+                                - Умение проводить диагностику командных процессов, вовлечённости, скрытых конфликтов.
+                                - Опыт построения системной работы: групповые сессии, индивидуальные консультации,
+                                регулярные check-in по климату и фону.
+                                - Отличные навыки коммуникации: вы легко работаете как с линейными сотрудниками, так и с
+                                руководителями.
+                            </p>
+                        </div>
+                        <button class="vacancy_button">
+                            Откликнуться
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="VacancyResponse">
+            <div class="container">
+                <h2>Откликнуться на вакансию</h2>
+                <form class="vacancy_form">
+                    <div class="vacancy_form_wrapper">
+                        <div class="input_field">
+                            <input name="name" placeholder="Фамилия и имя" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input_field">
+                            <input name="city" placeholder="Город проживания" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input_field">
+                            <input name="phone" placeholder="Телефон" type="text">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input_field">
+                            <input name="email" placeholder="Электронная почта" type="email">
+                            <div class="error"></div>
+                        </div>
+                        <div class="input_field">
+                            <input name="socials" type="text" placeholder="Ссылка на соц. сети">
+                            <div class="error"></div>
+                        </div>
+                        <div></div>
+                        <label for="resume" class="input_field_file">
+                            <p>Прикрепить резюме</p>
+                            <input type="file" name="resume" id="resume">
+                        </label>
+                    </div>
+                    <button class="vacancy_form_button" type="submit">Отправить</button>
+                    <input type="checkbox" class="custom-checkbox" id="happy1" name="happy" checked="" value="yes">
+                    <label for="happy1">Я даю согласие на обработку персональных данных и принимаю пользовательское
+                        соглашение</label>
+                    <img src="/src/img/logo_big.svg" class="vacancy_form_bg" alt="">
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="logo__bottom">
+                    <img src="/src/img/icons/logo_white.svg" alt="">
+                    <p>Well-being (благополучие сотрудников) 24/7</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Решения</a>
+                    <a href="#" class="footer-link">Экспертиза</a>
+                    <a href="#" class="footer-link">Презентация</a>
+                    <a href="#" class="footer-link">О компании</a>
+                    <a href="#" class="footer-link">Блог</a>
+                </div>
+                <div class="footer-socials">
+                    <p>info@fizminutka.ru</p>
+                    <div class="socials">
+                        <a href="">
+                            <img src="/src/img/telegram.svg" alt="telegram" title="telegram">
+                        </a>
+                        <a href="">
+                            <img src="/src/img/yt.svg" alt="youtube" title="youtube">
+                        </a>
+                        <a href="">
+                            <img src="/src/img/insta.svg" alt="instagram" title="instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-conf">
+                    <p>Мы используем cookies для сбора обезличенных персональных данных.
+                        Оставаясь на сайте, вы соглашаетесь на сбор таких данных.</p>
+                    <div class="conf">
+                        <a href="https://fitalino.com/ru/privacy-policy">Политика конфиденциальности</a>
+                        <p>|</p>
+                        <a href="https://fitalino.com/ru/terms-of-use">Пользовательское соглашение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../src/js/main.js"></script>
+</body>
+
+</html>

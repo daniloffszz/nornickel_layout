@@ -1,0 +1,205 @@
+@use '../vars.scss';
+
+.contacts_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 140px;
+
+    @include vars.down('lg') {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .addresses_list {
+        list-style: none;
+        padding-left: 20px;
+
+        li {
+            display: flex;
+            gap: 20px;
+            font-weight: 400;
+            font-size: 20px;
+            color: vars.$black;
+
+            &::before {
+                content: "";
+                width: 12px;
+                height: 21px;
+                display: block;
+                background: url('../src/img/icons/arrow.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+
+    .contacts_list {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        margin-top: 40px;
+        margin-bottom: 70px;
+
+        .contacts {
+            display: flex;
+            gap: 20px;
+
+            &:last-child::before {
+                margin-top: 6px;
+            }
+
+            &.number {
+                .phone {
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 60%;
+                    text-decoration: none;
+                    color: vars.$black;
+                }
+            }
+
+            &.email {
+
+                .contacts_block {
+                    gap: 0;
+                }
+
+                .copy_email {
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: vars.$black;
+                    display: flex;
+                    align-items: center;
+
+                    button {
+                        background: transparent;
+                        border: none;
+                    }
+                }
+            }
+
+            .contacts_block {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 20px;
+            }
+
+            &_socials {
+                display: flex;
+                gap: 32px;
+                margin-top: 24px;
+            }
+
+            &::before {
+                content: "";
+                width: 12px;
+                height: 21px;
+                min-width: 12px;
+                min-height: 21px;
+                display: block;
+                background: url('../src/img/icons/arrow.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+
+    .socials {
+        display: flex;
+        gap: 46px;
+        align-items: center;
+
+        a {
+            max-height: 40px;
+            width: 100%;
+            height: 100%;
+
+            svg {
+                max-height: 41px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .about_socials {
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .director_image {
+        max-width: 600px;
+        position: relative;
+
+        .message {
+            background: url('/src/img/bubble.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 36px 16px 20px 24px;
+            width: 360px;
+            font-weight: 300;
+            font-size: 16px;
+            color: vars.$white;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            bottom: 170px;
+
+            @include vars.down('sm') {
+                bottom: 12%;
+            }
+
+        }
+
+        .button_director {
+            position: absolute;
+            bottom: 35px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: fit-content;
+            font-weight: 700;
+            font-size: 16px;
+            max-width: 300px;
+            width: 100%;
+            text-decoration: none;
+
+            @include vars.down('sm') {
+                bottom: 1%;
+            }
+        }
+    }
+}
+
+#Contacts {
+    padding-top: 90px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 60px;
+        color: vars.$primary;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 20px;
+        color: vars.$black;
+    }
+}
+
+@media (max-width: 400px) {
+    .contacts_wrapper .director_image .message {
+        width: 320px;
+        font-size: 14px;
+    }
+}

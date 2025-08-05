@@ -1,8 +1,14 @@
 if (!localStorage.getItem('cookies')) {
-    document.querySelector('.cookies').style.display = 'flex'
+    if (document.querySelector('.cookies')) {
+        document.querySelector('.cookies').style.display = 'flex'
+    }
 }
 
-document.querySelector('.cookies button').addEventListener('click', () => {
-    localStorage.setItem('cookies', true)
-    document.querySelector('.cookies').style.display = 'none'
-})
+if (document.querySelector('.cookies')) {
+    document.querySelector('.cookies button').addEventListener('click', () => {
+        localStorage.setItem('cookies', true)
+
+        document.querySelector('.cookies').style.display = 'none'
+
+    })
+}
