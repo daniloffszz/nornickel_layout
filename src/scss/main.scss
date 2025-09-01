@@ -1,0 +1,59 @@
+@use './vars';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    color: vars.$black;
+}
+
+.container {
+    max-width: vars.$max-width;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.button {
+    height: 64px;
+    color: vars.$white;
+    background: vars.$primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 18px;
+
+    &.white {
+        color: vars.$white;
+    }
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 61px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 38px;
+    margin-top: 85px;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    max-width: 1020px;
+    text-align: center;
+    color: vars.$grey;
+    margin-top: 38px;
+}

@@ -1,0 +1,162 @@
+@use '../vars';
+
+#Program {
+    background: linear-gradient(180deg, #fff 0%, #f9f9fb 100%);
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .scedule {
+        margin-top: 46px;
+        display: flex;
+        gap: 21px;
+        align-items: center;
+
+        &_download {
+            border: 1.33px solid vars.$border;
+            border-radius: 13px;
+            background: #f9f9fb;
+            height: 53px;
+            padding: 0 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        &_time {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 145%;
+            color: vars.$grey;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    .tabs {
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+        background: #f3f5f7;
+        border-radius: 13px;
+        padding: 5px;
+        margin-top: 63px;
+        margin-bottom: 48px;
+
+        &_item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            height: 42px;
+            color: vars.$grey;
+
+            path {
+                stroke: vars.$grey;
+            }
+
+            &.active {
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+                background: #f9f9fb;
+                border-radius: 11px;
+                color: vars.$black;
+
+                path {
+                    stroke: vars.$black;
+                }
+            }
+        }
+    }
+
+    .scedule_main {
+        border: 1.33px solid vars.$border;
+        border-radius: 16px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        background: vars.$white;
+        padding: 33px;
+        width: 100%;
+        margin-bottom: 66px;
+
+        &[data-type=vystavka] {
+            display: none;
+        }
+
+        &_title {
+            font-weight: 600;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        &_subtitle {
+            font-weight: 400;
+            font-size: 18px;
+            color: vars.$grey;
+            margin-top: 8px;
+        }
+
+        &_list {
+            display: flex;
+            flex-direction: column;
+            margin-top: 32px;
+
+            &_item {
+                display: flex;
+                border-bottom: 1.33px solid vars.$border;
+                gap: 21px;
+                align-items: center;
+                min-height: 76px;
+
+                &_title {
+                    width: 100%;
+                    font-weight: 600;
+                    font-size: 21px;
+                    line-height: 151%;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 144%;
+                        color: vars.$grey;
+                    }
+                }
+
+                .chip {
+                    border: 1.33px solid vars.$border;
+                    border-radius: 13332px;
+                    padding: 0 14px;
+                    height: 29px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    white-space: nowrap;
+
+                    &.grey {
+                        background: #f3f5f7;
+                        border: none;
+                    }
+                    
+                    &.dark_grey {
+                        background: #545d78;
+                        border: none;
+                        color: vars.$white;
+                    }
+
+                    &.green {
+                        background: vars.$primary;
+                        border: none;
+                        color: vars.$white;
+                    }
+                }
+            }
+        }
+    }
+}

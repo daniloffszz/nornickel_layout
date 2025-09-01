@@ -1,142 +1,41 @@
-@use "../vars";
+@use '../vars';
 
 header {
-    height: 62px;
-    background: vars.$white;
-    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+    height: 86px;
+    border-bottom: 1px solid vars.$border;
     position: sticky;
-    top: 0;
-    z-index: 31;
+    top: 0px;
+    background: vars.$white;
+    z-index: 10;
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 36px;
+    }
 
     .logo {
-        height: 31px;
-        width: 216px;
-
-        @include vars.down('sm') {
-            width: 172px;
-            height: auto;
-        }
-    }
-
-    .burger {
-        display: none;
-
-        @include vars.down('lg') {
-            display: block;
-        }
-    }
-
-    nav {
-        align-items: flex-start;
+        font-weight: 700;
+        font-size: 26px;
         display: flex;
+        align-items: center;
+        gap: 13px;
+        min-width: 305px;
+    }
 
-        @include vars.down('lg') {
-            display: none !important;
-        }
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
 
-        .link {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            min-width: 132px;
-            justify-content: center;
-            font-weight: 400;
-            line-height: 150%;
-            text-align: center;
-            color: vars.$black;
+        a {
+            font-weight: 500;
+            font-size: 18px;
             text-decoration: none;
-
-            @include vars.down('xxls') {
-                font-size: vars.$fs-xs;
-                min-width: 92px;
-            }
-
-            &.active {
-                border-bottom: 4px #539ee6 solid;
-                height: (calc(100% - 4px));
-                margin: 4px;
-            }
-        }
-    }
-
-    .button {
-        @include vars.down('lg') {
-            display: none;
-        }
-    }
-
-    .phone {
-        text-decoration: none;
-
-        @include vars.down('xls') {
-            margin-right: 30px;
-            margin-left: auto;
-        }
-
-        @include vars.down('sm') {
-            margin-right: 16px;
-        }
-
-        p {
-            color: vars.$black;
-            font-weight: 700;
-            line-height: 150%;
-
-            @include vars.down('xxls') {
-                font-size: vars.$fs-xs;
-            }
-
-            @include vars.down('xls') {
-                display: none;
-            }
-        }
-
-        svg {
-            display: none;
-
-            @include vars.down('xls') {
-                display: block;
-            }
-        }
-    }
-}
-
-.mobile-nav {
-    position: fixed;
-    left: 0;
-    top: -100%;
-    height: 100dvh;
-    width: 100%;
-    z-index: 30;
-    background: #fff;
-    transition: .3s;
-    z-index: 30;
-
-    nav {
-        padding: 0 15px;
-        display: flex !important;
-        flex-direction: column;
-        margin-top: 30px;
-
-        .link {
-            height: fit-content;
-            width: fit-content;
-            justify-content: flex-start;
-            text-align: left;
-            font-size: 24px;
-            text-decoration: none;
-            color: vars.$black;
-
-            &.active {
-                border-bottom: 4px #539ee6 solid;
-                height: (calc(100% - 4px));
-                margin: 4px;
-            }
-
-            &.active {
-                height: fit-content;
-                margin-left: 0;
-            }
+            color: vars.$grey;
         }
     }
 }
