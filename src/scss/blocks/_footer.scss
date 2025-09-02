@@ -1,0 +1,110 @@
+footer {
+    background: #545d78;
+    padding-top: 64px;
+
+    .footer_wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                p {
+                    font-weight: 700;
+                    font-size: 31px;
+                    line-height: 137%;
+                    color: #fff;
+                }
+            }
+
+            .footer_text {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 169%;
+                color: rgba(255, 255, 255, 0.8);
+                max-width: 570px;
+            }
+
+            .column_title {
+                font-weight: 600;
+                font-size: 23px;
+                line-height: 158%;
+                color: #fff;
+            }
+
+            &.vertical {
+                .column_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 21px;
+                }
+            }
+
+            .column_item {
+                span {
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 152%;
+                    color: #5cc1b6;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 145%;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+
+            .flex {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 145%;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.footer_footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 44px;
+    border-top: 1.33px solid rgba(255, 255, 255, 0.2);
+    margin-top: 44px;
+    padding-bottom: 16px;
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 21px;
+        row-gap: 5px;
+        max-width: 600px;
+    }
+
+    p,
+    a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 144%;
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+    }
+}
