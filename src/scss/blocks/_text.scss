@@ -1,0 +1,47 @@
+@use '../vars';
+
+#Text {
+    padding-top: 60px;
+    padding-bottom: 90px;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include vars.down('xl') {
+            gap: 14px;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 39px;
+            text-transform: uppercase;
+            color: #5f6b75;
+
+            @include vars.down('xxl') {
+                font-size: 29px;
+            }
+
+            @include vars.down('xl') {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 39px;
+            color: #000;
+            max-width: 1050px;
+
+            @include vars.down('xxl') {
+                font-size: 29px;
+            }
+
+            @include vars.down('xl') {
+                font-size: 14px;
+                line-height: 110%;
+            }
+        }
+    }
+}

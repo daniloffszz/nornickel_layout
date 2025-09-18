@@ -1,5 +1,6 @@
 import '../scss/style.scss'
-import '../js/timer'
+import '@splidejs/splide/css/core';
+import './presentation'
 
 document.addEventListener('DOMContentLoaded', function () {
     

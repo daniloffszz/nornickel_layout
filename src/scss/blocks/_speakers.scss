@@ -1,0 +1,86 @@
+@use '../vars';
+
+#Speakers {
+    padding-top: 90px;
+
+    .speakers {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+
+        @include vars.down('xl') {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &_item {
+            img {
+                width: 100%;
+                max-height: 450px;
+                object-fit: cover;
+            }
+
+            &_name {
+                font-weight: 400;
+                font-size: 36px;
+                color: #000;
+                line-height: 110%;
+                margin-top: 20px;
+
+                @include vars.down('xxl') {
+                    font-size: 27px;
+                }
+
+                @include vars.down('xl') {
+                    font-size: 18px;
+                    margin-top: 12px;
+                }
+            }
+
+            &_job {
+                font-weight: 400;
+                font-size: 25px;
+                color: #000;
+                line-height: 110%;
+                margin-top: 8px;
+
+                @include vars.down('xxl') {
+                    font-size: 18px;
+                }
+
+                @include vars.down('xl') {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 75px;
+        color: #212121;
+
+        @include vars.down('xxl') {
+            font-size: 56px;
+        }
+
+        @include vars.down('xl') {
+            font-size: 24px;
+        }
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 31px;
+        text-transform: uppercase;
+        color: #0077c8;
+
+        @include vars.down('xxl') {
+            font-size: 23px;
+        }
+
+        @include vars.down('xl') {
+            font-size: 16px;
+        }
+    }
+}

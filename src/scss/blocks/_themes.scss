@@ -1,0 +1,71 @@
+@use '../vars';
+
+#Themes {
+    padding-top: 90px;
+
+    h2 {
+        font-weight: 400;
+        font-size: 75px;
+        color: #000;
+
+        @include vars.down('xxl') {
+            font-size: 56px;
+        }
+
+        @include vars.down('xl') {
+            font-size: 26px;
+        }
+    }
+
+    .themes {
+        display: flex;
+        flex-direction: column;
+        background: #f1f1f7;
+        gap: 90px;
+        padding: 55px;
+        margin-top: 40px;
+
+        @include vars.down('xl') {
+            margin-top: 12px;
+        }
+
+        &_item {
+            display: flex;
+            justify-content: space-between;
+
+            @include vars.down('xl') {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            &_left {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                p {
+                    font-weight: 400;
+                    font-size: 37px;
+                    color: #5f6b75;
+                    max-width: 500px;
+
+                    @include vars.down('xxl') {
+                        font-size: 28px;
+                    }
+                }
+            }
+
+            &_right {
+                max-width: 1060px;
+                font-weight: 400;
+                font-size: 25px;
+                color: #000;
+
+                @include vars.down('xxl') {
+                    font-size: 18px;
+                    max-width: 800px;
+                }
+            }
+        }
+    }
+}

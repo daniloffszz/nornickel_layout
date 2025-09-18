@@ -1,41 +1,98 @@
 @use '../vars';
 
 header {
-    height: 86px;
-    border-bottom: 1px solid vars.$border;
-    position: sticky;
-    top: 0px;
-    background: vars.$white;
-    z-index: 10;
+    height: 99px;
+    border-bottom: 11px solid #dfe0e8;
 
-    .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 36px;
+    @include vars.down('xl') {
+        min-height: 99px;
+        height: fit-content;
     }
 
-    .logo {
-        font-weight: 700;
-        font-size: 26px;
+    .container {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 13px;
-        min-width: 305px;
+
+        @include vars.down('xl') {
+            flex-wrap: wrap;
+        }
+
+        @include vars.down('sm') {
+            align-items: flex-start;
+        }
     }
 
     .links {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
         width: 100%;
+        justify-content: space-around;
 
-        a {
-            font-weight: 500;
+        @include vars.down('xl') {
+            display: none;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: flex-end;
+        width: 70%;
+        gap: 32px;
+
+        @include vars.down('xl') {
+            flex-wrap: wrap;
+        }
+
+        @include vars.down('sm') {
+            padding: 16px 0;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 25px;
+        color: #212121;
+
+        @include vars.down('xxl') {
             font-size: 18px;
-            text-decoration: none;
-            color: vars.$grey;
+        }
+
+        &.with_icon {
+            display: flex;
+            gap: 11px;
+            align-items: center;
+            line-height: 110%;
+        }
+
+        .icon {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            min-height: 35px;
+            border-radius: 50%;
+            background: #0077c8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include vars.down('xxl') {
+                width: 26px;
+                height: 26px;
+                min-width: 26px;
+                min-height: 26px;
+            }
+
+            img {
+                @include vars.down('xxl') {
+                    max-width: 13px;
+                    width: 100%;
+                }
+            }
         }
     }
 }

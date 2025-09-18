@@ -1,0 +1,49 @@
+@use '../vars';
+
+#From {
+    .from {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 70px;
+        background: #f1f1f7;
+        padding: 70px;
+
+        @include vars.down('xl') {
+            padding: 0;
+            grid-template-columns: 1fr;
+            background: none;
+            margin-bottom: 50px;
+        }
+
+        &_item {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            @include vars.down('xl') {
+                flex-direction: column;
+                background: #f1f1f7;
+                align-items: flex-start;
+                padding: 30px;
+                gap: 16px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 31px;
+                color: #000;
+                max-width: 700px;
+
+                @include vars.down('xxl') {
+                    font-size: 23px;
+                }
+            }
+
+            img {
+                @include vars.down('xl') {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,110 +1,72 @@
+@use '../vars';
+
 footer {
-    background: #545d78;
-    padding-top: 64px;
+    padding: 35px 0;
+    background: linear-gradient(90deg, #babcc7 0%, #626f79 20%, #626f79 80%, #babcc7 100%);
 
-    .footer_wrapper {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
+    @include vars.down('xl') {
+        background: #5F6B75;
+    }
 
-        .column {
-            display: flex;
+    .container {
+        max-width: 1200px;
+    }
+
+    .apper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include vars.down('xl') {
             flex-direction: column;
+        }
 
-            .logo {
+        .logo {
+            object-fit: contain;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 24px;
+            color: #fff;
+            text-align: right;
+
+            @include vars.down('xl') {
                 display: flex;
-                align-items: center;
-                gap: 16px;
-
-                p {
-                    font-weight: 700;
-                    font-size: 31px;
-                    line-height: 137%;
-                    color: #fff;
-                }
+                flex-direction: column;
+                text-align: left;
+                font-size: 16px;
+                width: 100%;
+                margin-top: 45px;
             }
 
-            .footer_text {
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 169%;
-                color: rgba(255, 255, 255, 0.8);
-                max-width: 570px;
+            @include vars.down('xxl') {
+                font-size: 24px;
             }
 
-            .column_title {
-                font-weight: 600;
-                font-size: 23px;
-                line-height: 158%;
+            span {
                 color: #fff;
-            }
-
-            &.vertical {
-                .column_item {
-                    display: flex;
-                    align-items: center;
-                    gap: 21px;
-                }
-            }
-
-            .column_item {
-                span {
-                    font-weight: 500;
-                    font-size: 20px;
-                    line-height: 152%;
-                    color: #5cc1b6;
-                }
-
-                p {
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 145%;
-                    color: rgba(255, 255, 255, 0.7);
-                }
-
-                .text {
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-
-            .flex {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-
-                p {
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 145%;
-                    color: #fff;
-                }
+                text-align: right;
             }
         }
     }
-}
 
-.footer_footer {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 44px;
-    border-top: 1.33px solid rgba(255, 255, 255, 0.2);
-    margin-top: 44px;
-    padding-bottom: 16px;
-
-    .flex {
+    .bottom {
+        margin-top: 44px;
         display: flex;
-        flex-wrap: wrap;
-        gap: 21px;
-        row-gap: 5px;
-        max-width: 600px;
-    }
+        justify-content: space-between;
+        align-items: center;
 
-    p,
-    a {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 144%;
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
+        @include vars.down('xxl') {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        p,
+        a {
+            font-weight: 400;
+            font-size: 16px;
+            color: #b0b7bc;
+        }
     }
 }

@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter';
+    font-family: 'Proxima Nova';
     color: vars.$black;
 }
 
@@ -12,169 +12,91 @@
     max-width: vars.$max-width;
     margin: 0 auto;
     width: 100%;
+    padding: 0 20px;
+}
+
+.mla {
+    margin-left: auto;
+}
+
+.mra {
+    margin-right: auto;
 }
 
 .button {
-    height: 64px;
-    color: vars.$white;
-    background: vars.$primary;
+    text-decoration: none;
+    height: 78px;
+    background: #0077c8;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 32px;
-    border-radius: 16px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    border: none;
+    width: fit-content;
+    border-radius: 52px;
+    gap: 38px;
+    padding-left: 32px;
+    font-weight: 400;
+    font-size: 31px;
+    color: vars.$white;
+    line-height: 110%;
 
-    &.grey {
-        background: #f9f9fb;
-        border: 1.33px solid #e5e7eb;
-        color: vars.$black;
-        height: 47px;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 145%;
+    @include vars.down('xxl') {
+        font-size: 23px;
+        height: 59px;
     }
-}
 
-.text {
-    font-weight: 500;
-    font-size: 18px;
+    @include vars.down('xl') {
+        font-size: 16px;
+        height: 40px;
+    }
 
     &.white {
-        color: vars.$white;
-    }
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 61px;
-    text-align: center;
-}
-
-h3 {
-    font-weight: 700;
-    font-size: 38px;
-    margin-top: 85px;
-}
-
-.subtitle {
-    font-weight: 400;
-    font-size: 24px;
-    max-width: 1020px;
-    text-align: center;
-    color: vars.$grey;
-    margin-top: 38px;
-}
-
-.chip {
-    border: 1.33px solid vars.$border;
-    border-radius: 13332px;
-    padding: 0 14px;
-    height: 29px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    width: fit-content;
-    gap: 10px;
-
-    &.grey {
-        background: #f3f5f7;
-        border: none;
-    }
-
-    &.dark_grey {
-        background: #545d78;
-        border: none;
-        color: vars.$white;
-    }
-
-    &.green {
-        background: vars.$primary;
-        border: none;
-        color: vars.$white;
-    }
-
-    &.yellow {
-        background: #ffd557;
-        border: none;
-    }
-
-    &.red {
-        background: #f16f73;
-        border: none;
-        color: vars.$white;
-    }
-
-    &.not_otline {
-        background: #f3f5f7;
-        border: none;
-    }
-}
-
-.card {
-    border: 1.33px solid #e5e7eb;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-    background: #fff;
-    padding: 33px;
-}
-
-.scedule_main {
-    border: 1.33px solid vars.$border;
-    border-radius: 16px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
-    background: vars.$white;
-    padding: 33px;
-    width: 100%;
-    margin-bottom: 66px;
-
-    &[data-type=vystavka] {
-        display: none;
-    }
-
-    &_title {
-        font-weight: 600;
-        font-size: 30px;
-        margin-top: 0;
-    }
-
-    &_subtitle {
         font-weight: 400;
-        font-size: 18px;
-        color: vars.$grey;
-        margin-top: 8px;
+        font-size: 31px;
+        color: #0077c8;
+        background: vars.$white;
+
+        @include vars.down('xl') {
+            font-size: 16px;
+        }
+
+        .icon {
+            background: #0077c8;
+            border: 2px solid vars.$white;
+        }
     }
 
-    &_list {
+    .icon {
+        height: 76px;
+        width: 76px;
+        min-height: 76px;
+        min-width: 76px;
+        background: vars.$white;
         display: flex;
-        flex-direction: column;
-        margin-top: 32px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 2px solid #0077c8;
 
-        &_item {
-            display: flex;
-            border-bottom: 1.33px solid vars.$border;
-            gap: 21px;
-            align-items: center;
-            min-height: 76px;
+        @include vars.down('xxl') {
+            height: 59px;
+            width: 59px;
+            min-height: 59px;
+            min-width: 59px;
+        }
 
-            &_title {
-                width: 100%;
-                font-weight: 600;
-                font-size: 21px;
-                line-height: 151%;
-                display: flex;
-                flex-direction: column;
+        @include vars.down('xl') {
+            height: 40px;
+            width: 40px;
+            min-height: 40px;
+            min-width: 40px;
+        }
 
-                span {
-                    font-weight: 500;
-                    font-size: 18px;
-                    line-height: 144%;
-                    color: vars.$grey;
-                }
+        img {
+            height: 30px;
+            width: auto;
+
+            @include vars.down('xl') {
+                height: 9px;
+                object-fit: contain;
             }
         }
     }

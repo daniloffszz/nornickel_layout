@@ -1,0 +1,63 @@
+@use '../vars';
+
+#DateStream {
+    padding: 90px 0;
+
+    .date_stream {
+        display: flex;
+        gap: 90px;
+
+        @include vars.down('xl') {
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        .title {
+            font-weight: 400;
+            font-size: 39px;
+            text-transform: uppercase;
+            color: #5f6b75;
+            max-width: 550px;
+
+            @include vars.down('xxl') {
+                font-size: 29px;
+            }
+
+            @include vars.down('xl') {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 65px;
+            color: #212121;
+            line-height: 100%;
+
+            @include vars.down('xxl') {
+                font-size: 49px;
+            }
+
+            @include vars.down('xl') {
+                font-size: 26px;
+            }
+
+            span {
+                font-weight: 400;
+                font-size: 43px;
+                color: #84848d;
+                line-height: 100%;
+                margin-top: 0;
+                display: block;
+
+                @include vars.down('xxl') {
+                    font-size: 32px;
+                }
+
+                @include vars.down('xl') {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
