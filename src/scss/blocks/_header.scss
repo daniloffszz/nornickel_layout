@@ -1,5 +1,14 @@
 @use '../vars';
 
+.main {
+    header {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 header {
     height: 99px;
     border-bottom: 11px solid #dfe0e8;
